@@ -43,6 +43,7 @@
           <button class="btn" id="tMeter" data-i="meter" disabled></button>
           <button class="btn warnb" id="tFix" data-i="fix" disabled></button>
         </div>
+        <div id="lcd" class="lcd" aria-hidden="true"><span class="lbl">DMM</span><span id="lcdv">---</span></div>
         <div id="log" class="log" aria-live="polite"></div>
         <button class="btn ghost" id="hint" data-i="hint"></button>
       </div>
@@ -54,7 +55,8 @@
       <h2 id="rtitle"></h2>
       <p id="rwhy"></p>
       <div id="rstats" class="muted"></div>
-      <div class="actions center"><button id="again" class="btn" data-i="again"></button><button id="next" class="btn ghost" data-i="menu"></button></div>
+      <pre id="report" class="report" tabindex="0"></pre>
+      <div class="actions center"><button id="copy" class="btn" data-i="copy"></button><button id="again" class="btn ghost" data-i="again"></button><button id="next" class="btn ghost" data-i="menu"></button></div>
     </div>
   </section>
 </main>
