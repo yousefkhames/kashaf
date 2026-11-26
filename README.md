@@ -26,6 +26,7 @@ Built for biomedical engineering students and anyone curious about how hospital 
 - Full English and Arabic (RTL) interface, switch any time without losing progress
 - Mobile first, keyboard and screen reader friendly
 - Installable and offline capable (PWA), progress kept on your device
+- Light and dark theme, text size control, level filter, keyboard shortcuts, private notes, deep links (`#ecg`), print-friendly report
 - Automated click-through test suite in `tests/`
 
 | Mobile bench | Arabic home | Service report |
