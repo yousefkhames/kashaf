@@ -51,3 +51,5 @@ footer{padding:18px;text-align:center;color:var(--mut);font-size:13px}footer a{c
 .report{white-space:pre-wrap;text-align:start;background:#06191c;border:1px dashed #1c5a60;border-radius:12px;padding:12px;font:13px/1.6 ui-monospace,Menlo,Consolas,monospace;margin:14px 0;color:#c4e3df}
 .daily{color:var(--amber);font-weight:700}.lnk{background:none;border:0;color:var(--mut);text-decoration:underline;font:inherit;cursor:pointer;padding:4px}.lnk:focus-visible{outline:3px solid var(--amber)}
 .log .h{border-inline-start:3px solid var(--amber)}
+.chk{list-style:none;padding:0;margin:12px auto;max-width:460px;text-align:start}.chk li{display:flex;justify-content:space-between;gap:10px;padding:6px 10px;border-radius:8px;margin:4px 0;background:var(--card2);font-size:14px}
+.chk li.bad{border-inline-start:3px solid var(--amber)}.chk li.ok{border-inline-start:3px solid var(--mint)}.chk li.skip{opacity:.6}.chk li span:last-child{color:var(--mut)}
