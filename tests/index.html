@@ -32,6 +32,8 @@ let loads=0;f.onload=async()=>{loads++;if(loads===1){f.contentWindow.localStorag
    q("#next").click();await sleep(30);
   }
  }
+ // filter chips
+ ok(qq(".chipb").length===4,"chips");qq(".chipb")[3].click();ok(qq(".card").length===1,"level3 filter "+qq(".card").length);qq(".chipb")[0].click();ok(qq(".card").length>=6,"all filter");
  // hint ladder: 5+10+15
  if(D.documentElement.lang!=="en")q("#lang").click();
  qq(".card")[1].click();q("#lock").click();q("#hint").click();q("#hint").click();q("#hint").click();
