@@ -28,11 +28,12 @@ main{flex:1;width:min(1080px,100%);margin:0 auto;padding:16px}
 .switch{position:relative;width:52px;height:30px;flex:none}.switch input{opacity:0;position:absolute;inset:0;cursor:pointer;z-index:2}
 .switch span{position:absolute;inset:0;background:#35575a;border-radius:99px;transition:.2s}.switch span:before{content:"";position:absolute;top:3px;inset-inline-start:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:.2s}
 .switch input:checked+span{background:var(--mint)}.switch input:checked+span:before{inset-inline-start:25px}
-#board{width:100%;height:auto;background:#06191c;border-radius:12px;border:1px dashed #1c5a60}
-.comp rect{fill:#10353b;stroke:#2a7a80;stroke-width:1.5;rx:10;transition:.15s;cursor:pointer}.comp:hover rect{stroke:var(--amber)}
-.comp.sel rect{stroke:var(--amber);stroke-width:3;fill:#1b4a50}.comp.checked rect{fill:#143f33}.comp.bad rect{fill:#4a2323;stroke:var(--red)}.comp.fixed rect{fill:#145040;stroke:var(--mint)}
-.comp text{fill:var(--ink);font-size:13px;text-anchor:middle;pointer-events:none;font-family:inherit}
-.comp{cursor:pointer;outline:none}
+.board{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:12px;background:#06191c;border-radius:12px;border:1px dashed #1c5a60}
+.comp{background:#10353b;border:1.5px solid #2a7a80;border-radius:12px;color:var(--ink);font:inherit;min-height:84px;padding:8px;cursor:pointer;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:4px;transition:.15s}
+.comp:hover{border-color:var(--amber)}.comp.sel{border-color:var(--amber);border-width:3px;background:#1b4a50}.comp.checked{background:#143f33}.comp.bad{background:#4a2323;border-color:var(--red)}.comp.fixed{background:#145040;border-color:var(--mint)}
+.cn{font-weight:600;font-size:15px}.cs{font-size:12px;color:var(--mut);min-height:16px}
+@media(max-width:560px){.board{grid-template-columns:repeat(2,1fr)}main{padding:10px}.hero{padding-top:20px}.tools .btn{flex:1}.bench-head h2{font-size:19px}#score{font-size:30px}.top{padding:10px 12px}}
+@media(max-width:800px){.side{position:sticky;bottom:0;z-index:5;box-shadow:0 -8px 24px #000a}.log{max-height:150px}}
 .side h3{margin:0 0 10px}.tools{display:flex;gap:8px;flex-wrap:wrap}
 .log{min-height:120px;max-height:260px;overflow:auto;margin:12px 0;font-size:14px}
 .log p{background:var(--card2);border-radius:10px;padding:8px 10px;margin:6px 0}.log .e{border-inline-start:3px solid var(--red)}.log .g{border-inline-start:3px solid var(--mint)}
