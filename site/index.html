@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kashaf · Medical device repair lab</title>
+<meta name="description" content="Kashaf is a free browser lab where you open virtual medical devices, hunt hidden faults and fix them. Training only.">
+<meta property="og:title" content="Kashaf · Medical device repair lab">
+<meta property="og:description" content="Open virtual hospital devices. Find the hidden fault. Fix it safely.">
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#"><img src="logo.svg" alt="" width="36" height="36"><span>Kashaf<small data-i="tag"></small></span></a>
+  <div class="actions"><span id="total" class="chip"></span><button id="lang" class="btn ghost" aria-label="Language">عربي</button></div>
+</header>
+<main>
+  <section id="home">
+    <div class="hero">
+      <h1 data-i="h1"></h1>
+      <p data-i="sub"></p>
+      <p class="warn" data-i="disc"></p>
+    </div>
+    <div id="cases" class="grid"></div>
+    <div class="how"><h2 data-i="howh"></h2><ol><li data-i="h1s"></li><li data-i="h2s"></li><li data-i="h3s"></li><li data-i="h4s"></li></ol></div>
+  </section>
+  <section id="bench" hidden>
+    <button id="back" class="btn ghost" data-i="back"></button>
+    <div class="bench-head"><div><div class="muted" id="bdev"></div><h2 id="btitle"></h2></div><div class="score"><div class="muted" data-i="score"></div><div id="score">100</div></div></div>
+    <div class="ticket"><b data-i="ticket"></b> <span id="complaint"></span></div>
+    <div class="row">
+      <div class="panel">
+        <div class="safety"><label class="switch"><input type="checkbox" id="lock"><span></span></label><div><b data-i="lock"></b><div class="muted" data-i="lockd"></div></div></div>
+        <svg id="board" viewBox="0 0 550 220" role="img"></svg>
+        <div class="muted center" data-i="tap"></div>
+      </div>
+      <div class="panel side">
+        <h3 id="cname" data-i="pick"></h3>
+        <div class="tools">
+          <button class="btn" id="tInsp" data-i="insp" disabled></button>
+          <button class="btn" id="tMeter" data-i="meter" disabled></button>
+          <button class="btn warnb" id="tFix" data-i="fix" disabled></button>
+        </div>
+        <div id="log" class="log" aria-live="polite"></div>
+        <button class="btn ghost" id="hint" data-i="hint"></button>
+      </div>
+    </div>
+  </section>
+  <section id="result" hidden>
+    <div class="panel center">
+      <div id="stars" class="stars"></div>
+      <h2 id="rtitle"></h2>
+      <p id="rwhy"></p>
+      <div id="rstats" class="muted"></div>
+      <div class="actions center"><button id="again" class="btn" data-i="again"></button><button id="next" class="btn ghost" data-i="menu"></button></div>
+    </div>
+  </section>
+</main>
+<footer><span data-i="foot"></span> · <a href="https://github.com/" id="gh" rel="noopener">GitHub</a></footer>
+<script src="cases.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+I built Kashaf, a free browser lab where you repair virtual hospital devices.
+
+You get a service ticket: "the infusion pump alarms for a blockage but the line is clear". You unplug and lock out the device, inspect parts, measure test points and decide what to replace. Every wasted step costs points. Opening a live device costs more.
+
+Four cases so far: infusion pump, patient monitor, defibrillator, suction pump. English and Arabic. Training only, fictional values.
+
+Try it: [LIVE LINK]
+Code: [GITHUB LINK]
+
+#BiomedicalEngineering #OpenSource #WebDev #HealthTech
