@@ -14,6 +14,15 @@
 
 > Training game with fictional values. Not a service manual and not for real repair or clinical decisions.
 
+## Screenshots
+
+Captured from the live site (https://yousefkhames.github.io/kashaf/).
+
+<p>
+  <img src="docs/screenshots/live-desktop.png" alt="kashaf desktop view" width="640">
+  <img src="docs/screenshots/live-mobile.png" alt="kashaf mobile view" width="200">
+</p>
+
 ## What it is
 You get a service ticket from a ward, for example "the infusion pump alarms for a blockage but the line is clear". You unplug and lock out the device, inspect parts, measure test points and decide what to replace. Wasted steps cost points. Opening a live device costs more. Parts that read normal are red herrings, so you have to reason, not guess.
 
