@@ -51,5 +51,31 @@ window.CASES = [
    {id:"tube",name:{en:"Patient tubing",ar:"خراطيم المريض"},x:20,y:130,w:150,h:70,insp:{en:"New and tight on the fittings.",ar:"جديدة ومتثبتة."},meter:{en:"Blocked outlet test: holds vacuum. Tubing is not leaking.",ar:"بالسد: بتحافظ على الفاكيوم. مفيش تسريب."}},
    {id:"gauge",name:{en:"Vacuum gauge",ar:"عداد الفاكيوم"},x:200,y:130,w:150,h:70,insp:{en:"Needle rests on zero.",ar:"الإبرة على الصفر."},meter:{en:"Matches a reference gauge. Accurate.",ar:"مطابق لعداد مرجعي."}},
    {id:"regulator",name:{en:"Regulator valve",ar:"صمام التحكم"},x:380,y:130,w:150,h:70,insp:{en:"Knob turns normally.",ar:"المقبض طبيعي."},meter:{en:"Closes fully at max setting.",ar:"بيقفل كامل عند الأقصى."}}],
-  why:{en:"Sound tells you the motor works, not that the pump moves air. Isolate sections: block the outlet, then block before the head. The leak was inside the head.",ar:"الصوت بيقولك الموتور شغال مش إن المضخة بتشفط. اعزل الأجزاء: اسد المخرج وبعدين قبل الرأس. التسريب كان جوه الرأس."}}
+  why:{en:"Sound tells you the motor works, not that the pump moves air. Isolate sections: block the outlet, then block before the head. The leak was inside the head.",ar:"الصوت بيقولك الموتور شغال مش إن المضخة بتشفط. اعزل الأجزاء: اسد المخرج وبعدين قبل الرأس. التسريب كان جوه الرأس."}},
+ {id:"ecg",icon:"ecg",level:2,
+  device:{en:"ECG machine",ar:"جهاز رسم قلب"},
+  title:{en:"Thick fuzzy trace on every lead",ar:"الرسم سميك ومشوّش على كل الليدز"},
+  complaint:{en:"Clinic: the ECG trace is covered in fast ripple on all leads. Patients are calm and skin is prepped. A new machine in the next room is clean.",ar:"العيادة: رسم القلب مليان تشويش سريع على كل الليدز. المرضى هادئين والجلد متجهّز. وجهاز تاني في الأوضاع جنبهم نضيف."},
+  fault:"rl",
+  comps:[
+   {id:"rl",name:{en:"Right-leg drive lead",ar:"سلك الرجل اليمنى"},insp:{en:"Snap connector looks fine, but the crimp at the cable end moves when tugged.",ar:"الفيشة شكلها سليم بس الكرمب عند طرف الكابل بيتحرك لما تشده."},meter:{en:"Continuity from snap to plug: open when tugged. The reference electrode is floating, so mains hum enters every lead.",ar:"التوصيل من الفيشة للمشبك بيقطع مع الشد. الإلكترود المرجعي سايب فبيدخل ٥٠ هرتز على كل الليدز."}},
+   {id:"la",name:{en:"Left-arm lead",ar:"سلك الذراع اليسرى"},insp:{en:"Clean and flexible.",ar:"نضيف ومرن."},meter:{en:"Continuity good, 0.4 ohm.",ar:"التوصيل سليم ٠٫٤ أوم."}},
+   {id:"v1",name:{en:"Chest lead V1",ar:"سلك الصدر V1"},insp:{en:"Good condition.",ar:"حالته كويسة."},meter:{en:"Continuity good.",ar:"التوصيل سليم."}},
+   {id:"filter",name:{en:"Mains filter setting",ar:"إعداد فلتر الكهرباء"},insp:{en:"Filter is ON at 50 Hz. Correct for this country.",ar:"الفلتر شغال على ٥٠ هرتز. صح للبلد."},meter:{en:"Setting verified, nothing wrong.",ar:"الإعداد سليم."}},
+   {id:"amp",name:{en:"Input amplifier",ar:"مكبر الدخل"},insp:{en:"Board clean, shield in place.",ar:"البوردة نضيفة والشيلد في مكانه."},meter:{en:"Gain and CMRR pass on a simulator when the reference lead is good.",ar:"الكسب والرفض المشترك سليمين مع سلك مرجعي كويس."}},
+   {id:"psu",name:{en:"Power supply",ar:"وحدة الطاقة"},insp:{en:"No bulging capacitors.",ar:"مفيش مكثفات منتفخة."},meter:{en:"Rails clean, ripple under 5 mV.",ar:"الجهود نضيفة والريبل أقل من ٥ مللي فولت."}}],
+  why:{en:"Noise on every lead points to something shared by all leads: the reference (right-leg) electrode. A broken single lead would only spoil its own trace. Look for what all channels have in common.",ar:"التشويش على كل الليدز معناه حاجة مشتركة بينهم: الإلكترود المرجعي (الرجل اليمنى). سلك واحد مقطوع كان هيبوّظ رسمه بس. دوّر على المشترك."}},
+ {id:"incubator",icon:"incub",level:3,
+  device:{en:"Neonatal incubator",ar:"حضانة أطفال"},
+  title:{en:"Over-temperature alarm, display says 36.5",ar:"إنذار حرارة عالية والشاشة بتقول ٣٦٫٥"},
+  complaint:{en:"NICU: alarm trips at 38 C. The display and setpoint say 36.5 C. A reference thermometer inside the hood reads 38.4 C.",ar:"العناية: الإنذار بيضرب عند ٣٨. الشاشة والمضبوط ٣٦٫٥. ترمومتر مرجعي جوه الغطاء بيقرا ٣٨٫٤."},
+  fault:"probe",
+  comps:[
+   {id:"probe",name:{en:"Air temperature probe",ar:"حساس حرارة الهوا"},insp:{en:"Probe tip is cracked and housing is loose.",ar:"طرف الحساس مشروخ والغلاف سايب."},meter:{en:"Resistance reads 11.2 kohm at 38.4 C. A good probe should read about 6.0 kohm. It reports a cooler air temperature, so the heater overdrives.",ar:"المقاومة ١١٫٢ كيلو أوم عند ٣٨٫٤. السليم حوالي ٦٫٠. بيقول إن الهوا أبرد فالسخان بيزود."}},
+   {id:"heater",name:{en:"Heater element",ar:"عنصر التسخين"},insp:{en:"Clean, no discoloration.",ar:"نضيف ومفيش تغيّر لون."},meter:{en:"Resistance 28 ohm. Matches the label.",ar:"المقاومة ٢٨ أوم، مطابقة للملصق."}},
+   {id:"fan",name:{en:"Circulation fan",ar:"مروحة التدوير"},insp:{en:"Spins freely, airflow good.",ar:"بتلف بحرية والهوا كويس."},meter:{en:"Draws normal current.",ar:"بتسحب تيار طبيعي."}},
+   {id:"skin",name:{en:"Skin probe",ar:"حساس الجلد"},insp:{en:"Not connected in this mode, not used in air mode.",ar:"مش موصل ومش مستخدم في وضع الهوا."},meter:{en:"Reads normal on the test jar.",ar:"قراءته طبيعية."}},
+   {id:"triac",name:{en:"Heater driver",ar:"دائرة تشغيل السخان"},insp:{en:"Heat sink cool to touch.",ar:"المبرّد بارد."},meter:{en:"Switches off when the controller commands off.",ar:"بتقفل لما الكنترولر يأمر."}},
+   {id:"ctrl",name:{en:"Controller board",ar:"بوردة التحكم"},insp:{en:"Clean. Safety cutout works, which is why the alarm tripped.",ar:"نضيفة. قاطع الأمان شغال وده سبب الإنذار."},meter:{en:"Control loop follows the sensor input correctly.",ar:"الحلقة بتتبع الحساس صح."}}],
+  why:{en:"The display believed the sensor and the sensor was wrong. Always compare the device against an independent reference. Here the independent reading exposed the lie. Recalibrate and test the safety cutout after the swap.",ar:"الشاشة صدقت الحساس والحساس غلط. قارن دايما الجهاز بمرجع مستقل. هنا القراءة المستقلة كشفت الغلط. بعد التبديل اعمل معايرة واختبر قاطع الأمان."}}
 ];

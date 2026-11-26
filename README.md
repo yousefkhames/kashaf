@@ -4,7 +4,7 @@ A free browser lab for practicing medical device repair. Open a virtual hospital
 
 **Training game with fictional values. Not a service manual. Not for real repair or clinical decisions.**
 
-- 4 cases: infusion pump, patient monitor, defibrillator, suction pump
+- 6 cases: infusion pump, patient monitor, defibrillator, suction pump, ECG machine, neonatal incubator
 - English and Arabic (RTL)
 - Runs fully in the browser, progress saved in localStorage, no backend, no tracking
 - Add a case by editing `cases.js` (see the existing entries)
