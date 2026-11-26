@@ -1,0 +1,38 @@
+<!doctype html><meta charset="utf-8"><title>running</title>
+<iframe id="f" src="../index.html" style="width:100vw;height:100vh;border:0"></iframe>
+<script>
+// Click-through regression suite. Open tests/index.html; the page title becomes PASS or FAIL with details.
+const f=document.getElementById("f"),errs=[],fails=[];
+const sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const ok=(c,m)=>{if(!c)fails.push(m)};
+let loads=0;f.onload=async()=>{loads++;if(loads===1){f.contentWindow.localStorage.clear();f.contentWindow.location.reload();return}if(loads>2)return;try{await sleep(300);
+ const W=f.contentWindow,D=W.document,q=s=>D.querySelector(s),qq=s=>[...D.querySelectorAll(s)];
+ W.addEventListener("error",e=>errs.push(e.message));
+ for(const lg of ["en","ar"]){
+  if(D.documentElement.lang!==lg)q("#lang").click();
+  await sleep(50);
+  ok(D.documentElement.dir===(lg==="ar"?"rtl":"ltr"),lg+" dir");
+  ok(D.documentElement.scrollWidth<=W.innerWidth+1,lg+" home overflow "+D.documentElement.scrollWidth+">"+W.innerWidth);
+  const n=qq(".card").length;ok(n>=6,"cards "+n);
+  for(let i=0;i<n;i++){
+   qq(".card")[i].click();await sleep(20);
+   ok(D.documentElement.scrollWidth<=W.innerWidth+1,lg+" bench overflow case "+i);
+   const c=W.CASES[i];
+   // unsafe path first on case 0 only
+   if(i===0&&lg==="en"){q("#tMeter").disabled&&0;const comps=qq(".comp");comps[0].click();q("#tMeter").click();ok(+q("#score").textContent===83,"unsafe+measure score "+q("#score").textContent);W.eval("");}
+   if(!(i===0&&lg==="en"))q("#lock").click();else q("#lock").click();
+   const idx=c.comps.findIndex(k=>k.id===c.fault);
+   const wrong=c.comps.findIndex(k=>k.id!==c.fault);
+   qq(".comp")[wrong].click();q("#tFix").click();
+   const exp=(i===0&&lg==="en")?73:90;
+   ok(+q("#score").textContent===exp,lg+" wrong swap score case "+i+" got "+q("#score").textContent);
+   qq(".comp")[idx].click();q("#tFix").click();await sleep(1000);
+   ok(!q("#result").hidden,lg+" result shown case "+i);
+   ok(q("#report").textContent.length>40,"report text");
+   q("#next").click();await sleep(30);
+  }
+ }
+ ok(errs.length===0,"js errors: "+errs.join(";"));
+}catch(e){fails.push("exception "+e.message)}
+document.title=fails.length?"FAIL "+fails.join(" | "):"PASS";};
+</script>
