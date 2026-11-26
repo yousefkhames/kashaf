@@ -55,7 +55,7 @@ window.CASES = [
  {id:"ecg",icon:"ecg",level:2,
   device:{en:"ECG machine",ar:"جهاز رسم قلب"},
   title:{en:"Thick fuzzy trace on every lead",ar:"الرسم سميك ومشوّش على كل الليدز"},
-  complaint:{en:"Clinic: the ECG trace is covered in fast ripple on all leads. Patients are calm and skin is prepped. A new machine in the next room is clean.",ar:"العيادة: رسم القلب مليان تشويش سريع على كل الليدز. المرضى هادئين والجلد متجهّز. وجهاز تاني في الأوضاع جنبهم نضيف."},
+  complaint:{en:"Clinic: the ECG trace is covered in fast ripple on all leads. Patients are calm and skin is prepped. A new machine in the next room is clean.",ar:"العيادة: رسم القلب مليان تشويش سريع على كل الليدز. المرضى هادئين والجلد متجهّز. وجهاز تاني في الأوضة اللي جنبها نضيف."},
   fault:"rl",
   comps:[
    {id:"rl",name:{en:"Right-leg drive lead",ar:"سلك الرجل اليمنى"},insp:{en:"Snap connector looks fine, but the crimp at the cable end moves when tugged.",ar:"الفيشة شكلها سليم بس الكرمب عند طرف الكابل بيتحرك لما تشده."},meter:{en:"Continuity from snap to plug: open when tugged. The reference electrode is floating, so mains hum enters every lead.",ar:"التوصيل من الفيشة للمشبك بيقطع مع الشد. الإلكترود المرجعي سايب فبيدخل ٥٠ هرتز على كل الليدز."}},
