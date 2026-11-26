@@ -63,3 +63,4 @@ footer{padding:18px;text-align:center;color:var(--mut);font-size:13px}footer a{c
 [data-theme=light] .ticket{background:#fff3d6;border-color:#e0b252;color:#4a3300}[data-theme=light] .report{background:#f3faf9;color:#1c3b3d;border-color:#9bc4be}
 [data-theme=light] .chip{color:#8a4b00}[data-theme=light] .brand{color:var(--ink)}
 .filters{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0}.chipb{background:transparent;color:var(--ink);border:1px solid #1f5a61;border-radius:99px;padding:6px 14px;font:inherit;font-size:14px;cursor:pointer}.chipb.on{background:var(--mint);color:#032;border-color:var(--mint);font-weight:700}[data-theme=light] .chipb{border-color:#9bc4be}[data-theme=light] .chipb.on{color:#fff}.chipb:focus-visible{outline:3px solid var(--amber)}
+.gloss dt{font-weight:700;margin-top:10px;color:var(--amber)}.gloss dd{margin:2px 0 0;color:var(--mut)}
