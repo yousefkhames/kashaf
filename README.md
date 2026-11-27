@@ -16,7 +16,7 @@
 
 ## Screenshots
 
-Captured from the live site (https://yousefkhames.github.io/kashaf/).
+Captured from the live site (https://yousefkhames.github.io/kashaf/) with sample demo content entered for the screenshot. It is not real user data.
 
 <p>
   <img src="docs/screenshots/live-desktop.png" alt="kashaf desktop view" width="640">
